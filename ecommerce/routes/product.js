@@ -8,7 +8,7 @@ const {userById}=require('../controllers/user1');
 router.post("/product/create/:userId",create)//pass admin id in userId
 router.delete('/product/:productId/userId',remove)
 router.get('/product/:productId',read);
-router.get('/products',list,requireSignin)
+router.get('/products',list)
 router.get('/products/related/:productId',listRelated)
 router.post('/products/by/search',listBySearch)
 router.get('/product/photo/:productId',photo)

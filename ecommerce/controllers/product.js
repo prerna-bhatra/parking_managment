@@ -28,6 +28,7 @@ exports.read=(req,res)=>
 
 }
 
+
 exports.create=(req,res)=>
 {
 
@@ -124,15 +125,9 @@ exports.remove=(req,res)=>
 exports.list=(req,res)=>
 {
 
-	let order=req.query.order?req.query.order :'asc'
-	let sortBy=req.query.order?req.query.order :'_id'
-	let limit=req.query.order?parseInt(req.query.order) :2
+	
 
 	Product.find()
-	.select("-photo")
-	.populate('category')
-	.sort([[sortBy,order]])
-	.limit(limit)
 	.exec((err,data)=>
 	{
 		if(err)

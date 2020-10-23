@@ -16,6 +16,8 @@ import Cart from './core/Cart'
 import Orders from './admin/Orders'
 import PurchaseHistory from './core/purchasehistory'
 import ManageOrders from './admin/ManageOrders'
+import SlotBookingForm from './core/SlotBookingForm'
+
 
 
 
@@ -30,6 +32,7 @@ const Routes=()=>{
 				<Route path="/singin" exact component={singin}/>
 				<PrivateRoute  path="/dashboard" exact component={Dashboard} />
 				<PrivateRoute  path="/purchasehistory" exact component={PurchaseHistory} />
+				<PrivateRoute  path="/bookslot/:slotNumber" exact component={SlotBookingForm} />
 				<AdminRoute  path="/admin/dashboard" exact component={AdminDashboard} />
 				<AdminRoute  path="/create/category" exact component={ADDCategory} />
 				<AdminRoute  path="/admin/orders" exact component={Orders} />

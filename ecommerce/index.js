@@ -6,7 +6,7 @@ const mongoose=require('mongoose');
 const userRoutes=require('./routes/users')
 const userRoutes1=require('./routes/user1')
 const productRoutes=require('./routes/product')
-
+const slotRoutes=require('./routes/BookSlot')
 const morgan=require("morgan");
 const bodyParser=require('body-parser');
 const cookieParser=require('cookie-parser')
@@ -33,7 +33,7 @@ app.use(cors())
 app.use('/api',userRoutes);
 app.use('/api',userRoutes1);
 app.use('/api',productRoutes);
-
+app.use('/api',slotRoutes);
 
 const port=process.env.PORT || 8000
 
