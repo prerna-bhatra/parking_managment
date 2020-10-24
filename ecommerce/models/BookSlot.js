@@ -33,7 +33,8 @@ const boolSlotSchema=new mongoose.Schema({
 	},
 	slotNumber:
 	{
-		type:Number
+		type:Number,
+		unique:32
 	}
 },
 {

@@ -18,7 +18,31 @@ exports.create=(req,res)=>
 	})
 }
 		
+exports.slotbuttonfun=(req,res)=>
+{
+	BookSlot.find()
+	.exec()	
+	.then((data,err)=>
+	{
+		if(err)
+		{
+			return res.status(400).json({
+				error:'slot can not booked'
+			});
+
+		}
+		res.json({data:data})
+	})
+}
+	
 		
 
 	
 	
+
+
+
+
+
+
+

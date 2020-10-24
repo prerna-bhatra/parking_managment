@@ -152,6 +152,20 @@ export const BookSlot=(userId,token,slotNumber,contact,name)=>{
 }
 	
 
+export const bookedSlots=()=>{
+	return fetch(`${BASE_URL}/slot/slotfun`,{
+		method:"GET",
+
+	})
+	.then(response=>{
+		return response.json()
+		//console.log(response)
+	})
+	.catch(err=>{
+		console.log(err)
+	})
+
+}
 
 
 
